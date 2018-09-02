@@ -39,12 +39,6 @@ RUN \
  apt-get update && \
  apt-get install -y \
 	plexmediaserver-installer && \
- echo "**** cleanup ****" && \
- apt-get clean && \
- rm -rf \
-	/tmp/* \
-	/var/lib/apt/lists/* \
-	/var/tmp/* && \
 	
  # Add Plex-Remote-Transcoder	
  curl -o /tmp/prt-wnielson.zip -L "https://github.com/wnielson/Plex-Remote-Transcoder/archive/master.zip" && \
