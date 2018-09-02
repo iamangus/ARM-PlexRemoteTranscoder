@@ -47,7 +47,7 @@ RUN \
 	/var/tmp/*
 
 # Add Plex-Remote-Transcoder
-	curl -o /tmp/prt-wnielson.zip -L "https://github.com/wnielson/Plex-Remote-Transcoder/archive/master.zip" && \
+ curl -o /tmp/prt-wnielson.zip -L "https://github.com/wnielson/Plex-Remote-Transcoder/archive/master.zip" && \
 	curl -o /tmp/prt-JJK801.zip -L "https://github.com/JJK801/Plex-Remote-Transcoder/archive/master.zip" && \
 	mkdir -p /app && \
 	unzip /tmp/prt-wnielson.zip -d /app/prt-wnielson && \
