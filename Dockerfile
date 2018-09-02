@@ -17,6 +17,15 @@ RUN \
 		unzip" && \
  apt-get update && \
  apt-get install -y \
+ 	${buildDeps} \
+	ca-certificates \
+	inotify-tools \
+	jq \
+	nfs-kernel-server \
+	openssh-client \
+	openssh-server \
+	python-psutil \
+	python-setuptools \
 	apt-transport-https \
 	avahi-daemon \
 	dbus \
@@ -36,24 +45,6 @@ RUN \
 	/tmp/* \
 	/var/lib/apt/lists/* \
 	/var/tmp/*
-
-# Install packages
-	buildDeps=" \
-		curl \
-		unzip" && \
-	apt-get update && \
-	apt-get install -y --no-install-recommends --no-install-suggests \
-		${buildDeps} \
-		ca-certificates \
-		inotify-tools \
-		jq \
-		nfs-kernel-server \
-		openssh-client \
-		openssh-server \
-		python-psutil \
-		python-setuptools && \
-	
-
 
 # Add Plex-Remote-Transcoder
 	curl -o /tmp/prt-wnielson.zip -L "https://github.com/wnielson/Plex-Remote-Transcoder/archive/master.zip" && \
