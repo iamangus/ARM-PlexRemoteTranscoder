@@ -12,6 +12,9 @@ ENV HOME="/config"
 
 RUN \
  echo "**** install packages ****" && \
+ buildDeps=" \
+		curl \
+		unzip" && \
  apt-get update && \
  apt-get install -y \
 	apt-transport-https \
