@@ -60,7 +60,7 @@ RUN \
  printf "StrictHostKeyChecking no\n" >> /etc/ssh/ssh_config && \
 
  # User configuration
- sed -i -e 's;/config:/bin/false;/config:/bin/bash;g' /etc/passwd && \
+ sed -i -e 's;/config:/bin/false;/config:/bin/bash;g' /etc/passwd \
 	
  # Cleaning
  # apt-get -y --purge autoremove ${buildDeps} && \
