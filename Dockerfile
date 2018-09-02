@@ -63,11 +63,11 @@ RUN \
  sed -i -e 's;/config:/bin/false;/config:/bin/bash;g' /etc/passwd && \
 	
  # Cleaning
- apt-get -y --purge autoremove ${buildDeps} && \
- rm -rf \
-	 /tmp/* \
-	 /var/lib/apt/lists/* \
-	 /var/tmp/*
+ # apt-get -y --purge autoremove ${buildDeps} && \
+ # rm -rf \
+ # 	 /tmp/* \
+ # 	 /var/lib/apt/lists/* \
+#	 /var/tmp/*
 
 # copy local files
 COPY root/ /
