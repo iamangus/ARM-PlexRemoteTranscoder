@@ -1,7 +1,7 @@
 FROM lsioarmhf/plex:latest
 
-RUN apt update -q && \
-    apt install unzip python-setuptools python-psutil openssh-client -qy
+RUN apt-get update && \
+    apt-get install -y unzip python-setuptools python-psutil openssh-client \
 
 RUN curl -J -L -o /tmp/prt.zip https://github.com/wnielson/Plex-Remote-Transcoder/archive/master.zip && \
     unzip /tmp/prt.zip -d /tmp && \
@@ -12,7 +12,7 @@ RUN curl -J -L -o /tmp/prt.zip https://github.com/wnielson/Plex-Remote-Transcode
     cd /
 
 ENV SLAVE_IP=slave_ip \
-    SLAVE_PORT=22 \
+    SLAVE_PORT=2222 \
     SLAVE_USER=plex \
     MASTER_IP=master_ip
 
