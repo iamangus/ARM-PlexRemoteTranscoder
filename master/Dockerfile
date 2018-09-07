@@ -1,7 +1,7 @@
 FROM lsioarmhf/plex:latest
 
 RUN apt-get update && \
-    apt-get install -y unzip python-setuptools python-psutil openssh-client \
+    apt-get install -y unzip python-setuptools python-psutil openssh-client
 
 RUN curl -J -L -o /tmp/prt.zip https://github.com/wnielson/Plex-Remote-Transcoder/archive/master.zip && \
     unzip /tmp/prt.zip -d /tmp && \
