@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv bash
+
+# configure prt slave
+printf "$MASTER_IP\n" | prt install
